@@ -1,0 +1,91 @@
+<div class="wrapper wrapper-full-page header-filter page-header login-page " filter-color="black" style="background-blend-mode: darken">
+    <div class="main-content">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto">
+                    1 of 2
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-md-6 col-sm-6 ml-auto mr-auto">
+                    <div class="card mt-5">
+                        <div class="card-header card-header-rose text-center">
+                            <h4 class="card-title">Log In</h4>
+                            <div class="social-line">
+                                <a class="btn btn-just-icon btn-link btn-white">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                                <a class="btn btn-just-icon btn-link btn-white">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-just-icon btn-link btn-white">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description text-center">Or Be Classical</p>
+                            <span class="bmd-form-group">
+                                <div class="input-group mt-3 mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">face</i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" placeholder="User Name..." type="text" [(ngModel)]="model.userName">
+                                </div>
+                            </span>
+                            <span class="bmd-form-group">
+                                <div class="input-group mt-3 mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">email</i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" placeholder="E-mail..." type="email" [(ngModel)]="model.email">
+                                </div>
+                            </span>
+                            <span class="bmd-form-group">
+                                <div class="input-group mt-3 mb-1">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="material-icons">lock_outline</i>
+                                        </span>
+                                    </div>
+                                    <input class="form-control" placeholder="Password..." type="password" [(ngModel)]="model.password">
+                                </div>
+                            </span>
+                        </div>
+                        <div class="card-footer justify-content-center">
+                            <a class="btn btn-rose btn-link btn-lg mb-3" (click)="login()">Lets Go</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-auto">
+                    <footer class="footer">
+                        <nav>
+                            <ul>
+                                <li><a href="https://www.grupowebmax.com" style="color: whitesmoke;">Grupo Webmax</a></li>
+                                <li><a href="https://www.grupowebmax.com/#" style="color: whitesmoke;">About Us</a></li>
+                                <li><a href="https://www.grupowebmax.com/#" target="_blank" style="color: whitesmoke;">Developer team</a></li>
+                            </ul>
+                        </nav>
+                    </footer>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-auto">
+                    <footer class="footer">
+                        <div class="copyright pull-right">
+                            &copy;
+                            {{test | date: 'yyyy'}}, made with love by
+                            <a href="https://www.grupowebmax.com" target="_blank">Grupo Webmax</a> for a better web.
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
