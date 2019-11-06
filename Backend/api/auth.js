@@ -13,14 +13,14 @@ module.exports = app => {
         const employee = await app.db('NodeProject_01.employees')
             .where({userName:req.body.userName}).first();
 
+        if (!employee) return res.status(400).send('User not found!');
+
         const supervisor = await app.db('NodeProject_01.teams')
             .where({supervisor:employee.id});
 
         if (supervisor) {
             employee.supervisor = supervisor;
         }
-
-        if (!employee) return res.status(400).send('User not found!');
 
         const isMatch = bcrypt.compareSync(req.body.password, employee.password);
         if (!isMatch) return res.status(401).send('Invalid UserName or Password!');
