@@ -19,6 +19,7 @@ export class NavbarComponent implements OnInit {
     notifications: any;
     private employee: any;
     private time: Date;
+    private showSidebar: boolean;
 
     constructor(
         location: Location,
@@ -155,5 +156,49 @@ export class NavbarComponent implements OnInit {
                 this.time = new Date()
             }
         )
+    }
+
+    SidebarOn() {
+        setTimeout(() => {
+            const sidebar = document.getElementsByClassName('sidebar')[0];
+            sidebar.removeAttribute('hidden');
+        }, 150);
+
+        const icon = document.getElementById('icon1');
+        icon.removeAttribute('hidden');
+
+        const hiddenIcon = document.getElementById('icon2');
+        hiddenIcon.setAttribute('hidden', 'true');
+
+        const mainContent = document.getElementsByClassName('main-panel')[0];
+        mainContent.removeAttribute('style');
+
+        this.showSidebar = true;
+    }
+
+    SidebarOff() {
+        setTimeout(() => {
+            const sidebar = document.getElementsByClassName('sidebar')[0];
+            sidebar.setAttribute('hidden', 'hidden');
+        }, 20);
+
+        const icon = document.getElementById('icon2');
+        icon.removeAttribute('hidden');
+
+        const hiddenIcon = document.getElementById('icon1');
+        hiddenIcon.setAttribute('hidden', 'true');
+
+        const mainContent = document.getElementsByClassName('main-panel')[0];
+        mainContent.setAttribute('style', 'width: 100%');
+
+        this.showSidebar = false
+    }
+
+    hideSidebar() {
+        if (this.showSidebar === false) {
+            this.SidebarOn()
+        } else {
+            this.SidebarOff()
+        }
     }
 }

@@ -3,12 +3,12 @@
         <div class="navbar-wrapper">
             <div class="navbar-minimize">
                 <button mat-raised-button mat-min-fab class="btn btn-white btn-just-icon btn-round"
-                        (click)="sidebarToggle()">
-                    <i class="material-icons">more_vert</i>
-                    <!--<i class="material-icons">view_list</i>-->
+                        (click)="hideSidebar()">
+                    <i class="material-icons" id="icon1">more_vert</i>
+                    <i class="material-icons" hidden id="icon2">view_list</i>
                 </button>
             </div>
-          <a class="navbar-brand" href="javascript:void(0)">{{getTitle()}}</a>
+          <a class="navbar-brand" href="javascript:void(0)" style="cursor: default">{{getTitle()}}</a>
         </div>
         <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
             <span class="sr-only">Toggle navigation</span>
