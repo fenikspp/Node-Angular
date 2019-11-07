@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
     mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
-    notifications: any;
+    private notifications: any = {};
     private employee: any;
     private time: Date;
     private showSidebar: boolean;
@@ -32,6 +32,7 @@ export class NavbarComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.employee = JSON.parse(localStorage.getItem('__Webmax_User'));
         this.getNotifications();
         this.clock();
 
@@ -136,8 +137,7 @@ export class NavbarComponent implements OnInit {
     }
 
     getNotifications() {
-        this.employee = localStorage.getItem('__Webmax_User');
-        this.notificationsService.getNotifications(1, JSON.parse(this.employee).id)
+        this.notificationsService.getNotifications(1, this.employee.id)
             .subscribe(response => {
                 this.notifications = response
             }, error => {

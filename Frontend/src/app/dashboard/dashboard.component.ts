@@ -82,8 +82,6 @@ export class DashboardComponent implements OnInit {
         this.getEmployees();
         this.getTeams();
         this.getEmployeesTeam();
-
-        console.log(this.employeesTeam);
       /* ----------==========     Daily Sales Chart initialization For Documentation    ==========---------- */
 
       const dataDailySalesChart: any = {
@@ -192,7 +190,6 @@ export class DashboardComponent implements OnInit {
                     console.log(error)
                 })
         }
-        console.log(this.employeesTeam)
     }
 
 }

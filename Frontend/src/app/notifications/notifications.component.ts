@@ -14,12 +14,13 @@ export class NotificationsComponent implements OnInit {
     constructor(private notificationsService: NotificationsService) { }
 
     ngOnInit() {
-        this.employee = localStorage.getItem('__Webmax_User');
+        this.notifications.data = [];
+        this.employee = JSON.parse(localStorage.getItem('__Webmax_User'));
         this.getNotifications();
     }
 
     getNotifications() {
-        this.notificationsService.getNotifications(1, JSON.parse(this.employee).id)
+        this.notificationsService.getNotifications(1, this.employee.id)
             .subscribe(response => {
                 this.notifications = response;
             }, error => {

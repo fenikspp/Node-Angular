@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './employee/login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
-import {AuthGuard} from './auth/auth.guard';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
     { path: '',   redirectTo: 'dashboard', pathMatch: 'full', canActivate: [AuthGuard] },

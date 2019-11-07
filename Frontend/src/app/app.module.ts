@@ -21,6 +21,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { EmployeeComponent } from './employee/employee.component';
 import {HttpClientModule} from '@angular/common/http';
 
+
 // noinspection JSDeprecatedSymbols
 @NgModule({
     imports: [
@@ -34,7 +35,7 @@ import {HttpClientModule} from '@angular/common/http';
         RouterModule,
         AppRoutingModule,
         AgmCoreModule.forRoot({
-            apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
+            apiKey: 'AIzaSyDfamaV77N0a-bAq-njQa1YmrMJYybKwFc'
         })
     ],
     declarations: [

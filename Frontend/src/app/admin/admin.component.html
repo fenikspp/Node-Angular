@@ -1,0 +1,49 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header card-header-tabs card-header-primary">
+                        <div class="nav-tabs-navigation">
+                            <div class="nav-tabs-wrapper">
+                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                    <li class="nav-item active">
+                                        <a href="#profile" class="nav-link" data-toggle="tab">
+                                            <i class="material-icons">person</i> Employees
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#messages" class="nav-link" data-toggle="tab">
+                                            <i class="material-icons">code</i> Second
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#settings" class="nav-link" data-toggle="tab">
+                                            <i class="material-icons">cloud</i> Third
+                                            <div class="ripple-container"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="profile">
+                                <app-employees></app-employees>
+                            </div>
+                            <div class="tab-pane" id="messages">
+                                Second Tab
+                            </div>
+                            <div class="tab-pane" id="settings">
+                                Third Tab
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -27,10 +27,10 @@
                         </thead>
                         <tbody *ngIf="notifications && notifications.data && notifications.data.length">
                             <tr *ngFor="let notification of notifications.data">
-                                <td class="text-center">{{notification.status}}</td>
-                                <td class="text-center">{{notification.userName}}</td>
-                                <td class="text-center">{{notification.subject}}</td>
-                                <td class="text-center">{{notification.sent_date}}</td>
+                                <td class="text-center">{{notification["status"]}}</td>
+                                <td class="text-center">{{notification["userName"]}}</td>
+                                <td class="text-center">{{notification["subject"]}}</td>
+                                <td class="text-center">{{notification["sent_date"]}}</td>
                             </tr>
                         </tbody>
                         <tfoot *ngIf="!notifications.data.length">
